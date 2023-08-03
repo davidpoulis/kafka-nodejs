@@ -18,6 +18,6 @@ jobs:
         with:
           node-version: 18
       - name: Release
-        run: npx semantic-release --tag-format "${version}"
+        run: npx semantic-release --tag-format "\${version}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
