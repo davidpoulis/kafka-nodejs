@@ -18,6 +18,5 @@ workflows:
         script: |
            set -x
            echo "${FCI_BRANCH}"
-           echo "$BUILD_NUMBER"
       - name: env
         script: env
