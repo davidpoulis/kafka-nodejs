@@ -10,7 +10,7 @@ workflows:
           include: true
           source: true
       tag_patterns:
-        - pattern: "v+([0-9]).+([0-9]).+([0-9])"
+        - pattern: "([0-9]).+([0-9]).+([0-9])"
           include: true
       cancel_previous_builds: true
     scripts:
