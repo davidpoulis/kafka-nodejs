@@ -1,0 +1,22 @@
+workflows:
+  ios-build-release:
+    name: iOS Build and Release
+    triggering:
+      events:
+        - push
+        - tag
+      branch_patterns:
+        - pattern: dev
+          include: true
+          source: true
+      tag_patterns:
+        - pattern: "([0-9]).+([0-9]).+([0-9]).prod"
+          include: true
+      cancel_previous_builds: true
+    instance_type: linux
+    scripts:
+      - name: print
+        script: |
+           set -x
+           echo "${FCI_BRANCH}"
+           echo "$BUILD_NUMBER"
