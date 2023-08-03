@@ -3,7 +3,6 @@ workflows:
     name: iOS Build and Release
     triggering:
       events:
-        - push
         - tag
       tag_patterns:
         - pattern: "([0-9]).+([0-9]).+([0-9])"
