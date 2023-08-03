@@ -5,10 +5,6 @@ workflows:
       events:
         - push
         - tag
-      branch_patterns:
-        - pattern: master
-          include: true
-          source: true
       tag_patterns:
         - pattern: "([0-9]).+([0-9]).+([0-9])"
           include: true
