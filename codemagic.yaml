@@ -12,8 +12,8 @@ workflows:
       - name: git checkout
         script: |
           set -x
-          git checkout master
-          git fetch
+          git branch temp-branch
+          git checkout temp-branch
           git checkout dev
       - name: print
         script: |
