@@ -16,10 +16,11 @@ workflows:
       - name: git branch
         script: |
           git branch -a
+          echo "${FCI_BRANCH}"
       - name: git checkout
         script: |
           git fetch origin
-          git checkout dev
+          git checkout origin/dev
       - name: print
         script: |
            set -x
