@@ -15,7 +15,7 @@ workflows:
     scripts:
       - name: git checkout
         script: |
-          git fetch
+          git fetch origin
           git checkout dev
       - name: print
         script: |
