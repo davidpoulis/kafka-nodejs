@@ -18,8 +18,7 @@ workflows:
           git branch -a
       - name: git checkout
         script: |
-          git fetch origin
-          git checkout dev
+          ls -l hello.txt
       - name: print
         script: |
            set -x
